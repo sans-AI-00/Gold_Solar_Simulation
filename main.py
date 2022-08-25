@@ -31,7 +31,7 @@ def simulation_values_and_plots(monthly_consumption, hours_of_activity, kwp=3, o
     plots = []
     for i in range(len(result['monthly'])):
         plot = plotting.hist_plot(result['monthly'][i], ylabel=ylabel_list[i], title=title_list[i], color=color_list[i], ec=ec_list[i])
-        plot.savefig(f'hist/fig_{i}.png')
+        #plot.savefig(f'hist/fig_{i}.png')
         plots.append(plot)
 
     return {'plots': plots, 'monthly': result['monthly'], 'annual': result['annual']}

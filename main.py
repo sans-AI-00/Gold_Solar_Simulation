@@ -47,7 +47,7 @@ def set_state_if_absent(key, value):
 
 def main():
 
-    st.set_page_config(page_title="Simulazione Gold Solar", page_icon=os.getcwd() + "icona.png")
+    st.set_page_config(page_title="Simulazione Gold Solar", page_icon=os.getcwd() + "/icona.png")
 
     # Persistent state
     set_state_if_absent("kwp", 4)
@@ -59,7 +59,7 @@ def main():
     set_state_if_absent("average_monthly_consumption", 500)
     set_state_if_absent("hours_of_activity", [{'start': 8, 'stop': 24} for i in range(12)])
 
-    st.sidebar.image(os.getcwd() + "GOLD-SOLAR-LOGO_3.png", caption=None, width=None, use_column_width=True, clamp=False,
+    st.sidebar.image(os.getcwd() + "/GOLD-SOLAR-LOGO_3.png", caption=None, width=None, use_column_width=True, clamp=False,
                      channels="RGB", output_format="auto")
 
     st.sidebar.markdown("""<hr />""", unsafe_allow_html=True)

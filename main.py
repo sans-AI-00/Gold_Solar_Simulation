@@ -47,7 +47,7 @@ def set_state_if_absent(key, value):
 
 def main():
 
-    st.set_page_config(page_title="Simulazione Gold Solar", page_icon="./icona.png")
+    st.set_page_config(page_title="Simulazione Gold Solar", page_icon="icona.png")
 
     # Persistent state
     set_state_if_absent("kwp", 4)
@@ -59,8 +59,8 @@ def main():
     set_state_if_absent("average_monthly_consumption", 500)
     set_state_if_absent("hours_of_activity", [{'start': 8, 'stop': 24} for i in range(12)])
 
-    st.sidebar.image("./GOLD-SOLAR-LOGO_3.png", caption=None, width=None, use_column_width=True, clamp=False,
-                     channels="RGB", output_format="auto")
+    st.sidebar.image("GOLD-SOLAR-LOGO_3.PNG", caption=None, width=None, use_column_width=True, clamp=False,
+                     channels="RGB", output_format="PNG")
 
     st.sidebar.markdown("""<hr />""", unsafe_allow_html=True)
     st.session_state.kwp = st.sidebar.number_input(label="Taglia dell'impianto (Kwp)", min_value=0,
